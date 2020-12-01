@@ -1,0 +1,52 @@
+
+.list-table {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 1rem auto;
+}
+.list-table thead tr th{
+  height:40px;
+  border-top:2px solid #09C;
+  border-bottom:1px solid #CCC;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.list-table tbody tr td{
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #CCC; 
+  height:20px;
+  font-size: 1rem;
+}
+
+
+.rebtn{
+    background-color: #4CAF50;
+    opacity: 0.9;
+}
+
+.addbtn{
+    background-color: #7ca1f8;
+    opacity: 0.9;
+}
+
+.rebtn, .addbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .rebtn, .addbtn {
+     width: 100%;
+  }
+}

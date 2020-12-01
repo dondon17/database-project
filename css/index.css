@@ -1,0 +1,32 @@
+
+.topmenu-links a:not(.topmenu-links-name){
+    margin-left: 1em;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.content-section{
+	position: relative;
+    padding: 42.5vh 0;
+}
+.main-message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40vh;
+    margin: 5px 0;
+    height: 3em;
+    font-size: 1.5rem;
+}
+
+.main-message p{
+    color: black;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.main-message strong{
+    font-size: 1.75rem;
+    color: rgb(12,65,99);
+}

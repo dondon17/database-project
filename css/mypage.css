@@ -1,0 +1,32 @@
+
+
+.content-section{
+	padding: 32vh 0.5rem;
+	max-width: 85%;
+}
+.list-table {
+    position: relative;
+	width: 100%;
+	padding: 0;
+	/* margin: 1rem auto; */
+}
+
+.list-table thead tr th{
+	height:40px;
+	border-top:2px solid #09C;
+	border-bottom:1px solid #CCC;
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+.list-table tbody tr td{
+	text-align: center;
+	padding: 10px 0;
+	border-bottom: 1px solid #CCC; 
+	height:20px;
+	font-size: 1rem;
+}
+
+.searchbtn {
+	background-color: #4CAF50;
+}

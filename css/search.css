@@ -1,0 +1,17 @@
+.searchbtn{
+  background-color: #4CAF50;
+}
+.cancelbtn{
+  background-color: #f44336;
+}
+
+.searchbtn, .cancelbtn {
+  float: left;
+  width: 50%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

@@ -1,0 +1,28 @@
+.gomypagebtn{
+    background-color: #4CAF50;
+    opacity: 0.9;
+}
+
+.gosearchbtn{
+    background-color: #7ca1f8;
+    opacity: 0.9;
+}
+
+.gomypagebtn, .gosearchbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .gomypagebtn, .gosearchbtn {
+     width: 100%;
+  }
+}

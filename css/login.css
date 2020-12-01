@@ -1,0 +1,32 @@
+.content-section{
+  padding: 30vh 0.5rem;
+  max-width: 85%;
+}
+.content-section h2{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.loginbtn{
+  background-color: #4CAF50;
+}
+
+.signupbtn{
+    background-color: #7ca1f8;
+}
+
+.loginbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media screen and (max-width: 300px) {
+  .loginbtn, .signupbtn {
+     width: 100%;
+  }
+}
