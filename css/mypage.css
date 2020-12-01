@@ -1,7 +1,6 @@
 
-
 .content-section{
-	padding: 32vh 0.5rem;
+	padding: 25vh 0.5rem;
 	max-width: 85%;
 }
 .list-table {
@@ -27,6 +26,9 @@
 	font-size: 1rem;
 }
 
+form{
+	margin-top: 3rem;
+}
 .searchbtn {
 	background-color: #4CAF50;
 }
