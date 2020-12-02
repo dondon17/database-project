@@ -24,18 +24,27 @@
                 session_start();
                 $connect = OpenCon();
                 $id = $_SESSION['cusid'];
-                $sql = "select movid, title, genre, rating from movie where movid in (select qmovid from moviequeue where qcusid='$id')";
+                
+                $sql0 = "select acctype from customer where cusid='$id'";
+                $res = $connect->query($sql0); 
+                $row = mysqli_fetch_assoc($res);
+
+                $sql2 = "delete from orders o where o.duedate < now() and o.ordcusid='$id'";
+                $result2 = $connect->query($sql2);                 
+                
+                $sql = "select movid, title, genre, rating, duedate from movie m, orders o where m.movid=o.ordmovid and o.ordcusid='$id'";
                 $result = $connect->query($sql); 
+                
             ?>
-            <label align="center"><strong><?php echo $_SESSION['cusid']; ?><?php echo "님의 보유 영화 목록입니다."; ?></strong></label>
-            
+            <strong><?php echo $_SESSION['cusid']; ?><?php echo '('.$row['acctype'].')'; ?><?php echo "님의 보유 영화 목록입니다."; ?></strong>
             <table class="list-table">
                 <thead>
                     <tr>
-                        <th>id</th>
+                        <th>번호</th>
                         <th>제목</th>
                         <th>장르</th>
                         <th>평점</th>
+                        <th>만료일</th>
                     </tr>
                 </thead>
                 
@@ -49,6 +58,7 @@
                         <td><?php echo $row['title']; ?></a></td>
                         <td><?php echo $row['genre']; ?></td>
                         <td><?php echo $row['rating']; ?></td>
+                        <td><?php echo $row['duedate']; ?></td>
                       </tr>
                     </tbody>
                 <?php } ?>
@@ -58,7 +68,7 @@
                 <button class="searchbtn" value="search" onclick="location.href='./moviesearch.php'">영화 검색</button>  
             </div> -->
             <form method='get' action='moviesearch_action.php'>
-                <label for="keyword"><strong>검색 키워드</strong></label>
+                <strong>검색 키워드</strong>
                 <select name="keyword" id="keyword">
                     <option value="title">제목</option>
                     <option value="actname">배우</option>

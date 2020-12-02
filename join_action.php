@@ -14,7 +14,7 @@
     $cardno=$_GET[cardno];
     $acctype=$_GET[acctype];
     //입력받은 데이터를 DB에 저장
-    $query = "insert into customer values ('$id', '$pw', '$email', '$fname', '$lname', '$address', '$city', '$zipcode', '$phoneno', concat('_acc', '$id'), '$cardno', '$acctype')";
+    $query = "insert into customer values ('$id', '$pw', '$email', '$fname', '$lname', '$address', '$city', '$zipcode', '$phoneno', concat('acc_', '$id'), '$cardno', '$acctype')";
     $result = $connect->query($query);
     //저장이 됬다면 (result = true) 가입 완료
     if($result) {
