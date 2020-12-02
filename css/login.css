@@ -1,6 +1,6 @@
 .content-section{
   padding: 30vh 0.5rem;
-  max-width: 85%;
+  max-width: 30%;
 }
 .content-section h2{
   font-size: 2rem;
@@ -16,7 +16,7 @@
 
 .loginbtn, .signupbtn {
   float: left;
-  width: 50%;
+  width: 100%;
 }
 
 .clearfix::after {
@@ -25,8 +25,9 @@
   display: table;
 }
 
-@media screen and (max-width: 300px) {
-  .loginbtn, .signupbtn {
-     width: 100%;
+@media(max-width: 500px) {
+
+  .content-section{
+    max-width: 85%; 
   }
 }

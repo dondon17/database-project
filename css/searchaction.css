@@ -1,4 +1,8 @@
 
+.content-section{
+	padding: 44vh 0.5rem;
+	max-width: 100%;
+}
 .list-table {
   position: relative;
   width: 100%;
@@ -10,7 +14,7 @@
   border-top:2px solid #09C;
   border-bottom:1px solid #CCC;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .list-table tbody tr td{

@@ -1,7 +1,11 @@
 
 .content-section{
 	padding: 25vh 0.5rem;
-	max-width: 85%;
+	max-width: 100%;
+}
+
+.content-section strong{
+	font-size: 1.2rem;
 }
 .list-table {
     position: relative;
@@ -15,7 +19,7 @@
 	border-top:2px solid #09C;
 	border-bottom:1px solid #CCC;
 	font-weight: bold;
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 .list-table tbody tr td{
@@ -32,3 +36,10 @@ form{
 .searchbtn {
 	background-color: #4CAF50;
 }
+
+
+@media(max-width: 500px) {
+	.content-section{
+	  max-width: 95%; 
+	}
+  }
