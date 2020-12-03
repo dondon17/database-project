@@ -23,33 +23,26 @@
 
         <table class="list-table">  
           <thead>
-                <tr>
-                  <th>Movie id</th>
-                    <th>Title</th>
-                    <th>Genre</th>
-                    <th>Copies</th>
-                    <th>Rating</th>
-                    <th>Select</th>
-                  </tr>
-                </thead>
+            <tr>
+              <th>id</th><th>제목</th><th>장르</th><th>재고</th><th>평점</th><th>선택</th>
+            </tr>
+          </thead>
             <?php
-                include 'db.php';
-                session_start();
-                $connect = OpenCon();
-                $keyword=$_GET['keyword'];
-                $input=$_GET['inputkeyword'];
-                if($keyword=="actname"){
-                  $sql = "select * from movie where movid in (select mamovid from movieactor where maactid in (select actid from actor where $keyword like '%$input%'));";
-                }
-                else{
-                  $sql = "select * from movie where $keyword like '%$input%';";
-                }
-                $result = $connect->query($sql);
-                while($row = mysqli_fetch_assoc($result))
-                {
-                  
-                  ?>
-        <form action="./addlist_action.php" method="get">
+              include 'db.php';
+              session_start();
+              $connect = OpenCon();
+              $keyword=$_GET['keyword'];
+              $input=$_GET['inputkeyword'];
+              if($keyword=="actname"){
+                $sql = "select * from movie where movid in (select mamovid from movieactor where maactid in (select actid from actor where $keyword like '%$input%'));";
+              }
+              else{
+                $sql = "select * from movie where $keyword like '%$input%';";
+              }
+              $result = $connect->query($sql);
+              while($row = mysqli_fetch_assoc($result))
+              { ?>
+          <form action="./addlist_action.php" method="get">
             <tbody>
               <tr>
                 <td><?php echo $row['movid']; ?></td>
@@ -57,17 +50,21 @@
                 <td><?php echo $row['genre']; ?></td>
                 <td><?php echo $row['copies']; ?></td>
                 <td><?php echo $row['rating']; ?></td>
-                <td><input type="radio" name="movid" value="<? echo $row['movid']; ?>">
-                      
+                <td>
+                
+                  <input type="radio" name="movid" value="<?php echo $row['movid']; ?>">
+                  <!-- <input type="submit" name="movid" formaction="addlist_action.php" value="➕"> -->
+                  <!-- <input type="submit" name="movid" formaction="" value="❤"> -->
+                </td>             
               </tr>
             </tbody>
-            <?php } ?>
-          </table>
-          <div class="clearfix">
-            <button type="submit" class="addbtn" value="add">리스트에 추가</button>
-            <button type="button" class="rebtn" value="research" onclick="location.href='./mypage.php'">다시 검색</button>
-          </div>
-        </form>
+          <?php } ?>
+        </table>
+            <div class="clearfix">
+              <button type="submit" class="addbtn" value="add">추가</button>
+              <button type="button" class="rebtn" value="research" onclick="location.href='./mypage.php'">다시 검색</button>
+            </div>
+          </form>
       </section>
       <!-- ----------------------------- footer ----------------------------- -->
       <footer class="js-footer">

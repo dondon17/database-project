@@ -1,11 +1,16 @@
 .content-section{
-  padding: 30vh 0.5rem;
+  padding: 26vh 0.5rem;
   max-width: 30%;
 }
 .content-section h2{
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+
+.content-section label{
+	font-size: 1.2rem;
+}
+
 .loginbtn{
   background-color: #4CAF50;
 }

@@ -4,7 +4,7 @@
     $connect = OpenCon();
     $cusid = $_SESSION['cusid'];
     $movid = $_GET['movid'];
-
+    
     $oldcntsql = "select count(*) cnt from moviequeue where qcusid='$cusid'";
     $oldres = $connect->query($oldcntsql);
     $oldrow = mysqli_fetch_assoc($oldres);
@@ -31,22 +31,3 @@
 <?php
     }
 ?>
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/ordermov.css">
-    <title>order movie</title>
-</head>
-<body>
-    <div class="container">
-        <h2>Order movie</h2>
-        <div class="clearfix">
-            <button type="button" class="gomypagebtn" onclick="location.href='./mypage.php'">마이페이지</button>
-            <button type="button" class="gosearchbtn" onclick="location.href='./moviesearch.php'">검색</button>
-        </div>
-    </div>
-</body>
-</html> -->

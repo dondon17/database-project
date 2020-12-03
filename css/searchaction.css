@@ -12,7 +12,7 @@
 .list-table thead tr th{
   height:40px;
   border-top:2px solid #09C;
-  border-bottom:1px solid #CCC;
+  border-bottom: 1px solid #CCC;
   font-weight: bold;
   font-size: 1rem;
 }
@@ -28,17 +28,16 @@
 
 .rebtn{
     background-color: #4CAF50;
-    opacity: 0.9;
 }
-
 .addbtn{
     background-color: #7ca1f8;
-    opacity: 0.9;
 }
-
-.rebtn, .addbtn {
-  float: left;
-  width: 50%;
+  
+.addbtn, .likebtn{
+    opacity: 0.9;
+    width: 100%;
+    /* width: auto;
+    padding: 0 0; */
 }
 
 /* Clear floats */
