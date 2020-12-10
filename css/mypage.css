@@ -15,12 +15,20 @@ table label{
 }
 .content-section-accountinfo{
     margin: 0 auto;
-    margin-bottom: 1.5rem;
-} 
+    margin-bottom: 2rem;
+}
+.content-section-movieinfo{
+    width: 95%;
+    max-width: 700px;
+}
 
-.order-list-table, .like-list-table{
+.order-list-table, .like-list-table, .bestseller-table{
     width: 100%;
     margin: 0 0 1.5rem 0;
+}
+
+.bestseller-table thead tr th{
+	border-top: 2px solid gold;
 }
 
 .message{

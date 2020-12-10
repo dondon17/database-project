@@ -21,7 +21,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/mypage.css">
-        <title>css test</title>
+        <title>Donmov</title>
     </head>
 <body>
     <div class="container">
@@ -38,8 +38,37 @@
             <div class="content-section-accountinfo">
                 <h3>안녕하세요 <?php echo $id.'('.$acctype.')'; ?>님</h3>
             </div>
-            <!-- 주문한 영화 목록; premium 계정은 무제한 / basic 계정은 최대 2개 -->
+                <!-- 주문한 영화 목록; premium 계정은 무제한 / basic 계정은 최대 2개 -->
             <div class="content-section-movieinfo">
+                <table class="bestseller-table">
+                <?php 
+                $query0 = "select movid, title, genre, rating, copies, count(*) 주문수 from movie where movid in (select ordmovid from orders) group by movid, title order by 주문수 desc limit 5";
+                $result0 = $connect->query($query0);                
+                if(mysqli_num_rows($result0) == 0){ ?>
+                    <label class="notification message">아직 베스트 셀러가 없습니다.</label>
+                <?php }
+                else{ ?>                 
+                    <label class="notification message">이달의 베스트셀러🏆</label>
+                    <thead>
+                        <tr>
+                            <th>번호</th><th>제목</th><th>장르</th><th>평점</th><th>재고</th><th>주문수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            while($row0 = mysqli_fetch_assoc($result0)){ ?>
+                                    <tr>
+                                        <td><?php echo $row0['movid']; ?></td>
+                                        <td><?php echo $row0['title']; ?></td>
+                                        <td><?php echo $row0['genre']; ?></td>
+                                        <td><?php echo $row0['rating']; ?></td>
+                                        <td><?php echo $row0['copies']; ?></td>
+                                        <td><?php echo $row0['주문수']; ?></td>
+                                    </tr>
+                            <?php } ?>
+                    </tbody>
+                </table>
+                <?php } ?>
                 <table class="order-list-table">
                     <?php 
                     // query2는 order 테이블 출력
@@ -59,61 +88,61 @@
                             </tr>
                         </thead>
                         <?php
-                        while($row = $result2->fetch_assoc()){ ?>
-                        <tbody>
-                        <tr>
-                            <td><?php echo $row['movid']; ?></td>
-                            <td><?php echo $row['title']; ?></td>
-                            <td><?php echo $row['genre']; ?></td>
-                            <td><?php echo $row['rating']; ?></td>
-                            <td><?php echo $row['duedate']; ?></td>
-                            <td>
-                                <input type="hidden" name="movid" value="<?php echo $row['movid']; ?>">
-                                <input name="videoaction" type="submit" value="▶">
-                            </td>
-                        </tr>
-                        </tbody>
-                        <?php } ?>
-                        </form>
-                        <?php } ?>
-                </table>
-                <!-- 좋아요 누른 영화목록; 계정에 관계없이 좋아요는 무제한으로 추가 가능 -->
-                <div class="videoplace"> </div>
-                <table class="like-list-table">
-                    <?php 
-                    
-                    // query3는 like 테이블 출력
-                    $query3 = "select movid, title, genre, rating, copies from movie m, likes l where m.movid=l.likemovid and l.likecusid='$id'";
-                    $result3 = $connect->query($query3); 
-                    if(mysqli_num_rows($result3) == 0){ ?>
-                        <label class="notification message">좋아요를 누른 영화가 없습니다.</label>
-                        <?php }
-                    else{ ?>
-                        <label class="notification message">좋아요를 누른 영화입니다.</label>
-                        <form action="likeaction.php" method="POST">
-                        <thead>
+                            while($row = $result2->fetch_assoc()){ ?>
+                            <tbody>
                             <tr>
-                                <th>번호</th><th>제목</th><th>장르</th><th>평점</th><th>재고</th><th>선택</th>
+                                <td><?php echo $row['movid']; ?></td>
+                                <td><?php echo $row['title']; ?></td>
+                                <td><?php echo $row['genre']; ?></td>
+                                <td><?php echo $row['rating']; ?></td>
+                                <td><?php echo $row['duedate']; ?></td>
+                                <td>
+                                    <input type="hidden" name="movid" value="<?php echo $row['movid']; ?>">
+                                    <input name="videoaction" type="submit" value="▶">
+                                </td>
                             </tr>
-                        </thead>
-                        <?php
+                            </tbody>
+                            <?php } ?>
+                            </form>
+                            <?php } ?>
+                    </table>
+                    <!-- 좋아요 누른 영화목록; 계정에 관계없이 좋아요는 무제한으로 추가 가능 -->
+                    <div class="videoplace"> </div>
+                    <table class="like-list-table">
+                        <?php 
+                        
+                        // query3는 like 테이블 출력
+                        $query3 = "select movid, title, genre, rating, copies from movie m, likes l where m.movid=l.likemovid and l.likecusid='$id'";
+                        $result3 = $connect->query($query3); 
+                        if(mysqli_num_rows($result3) == 0){ ?>
+                            <label class="notification message">좋아요를 누른 영화가 없습니다.</label>
+                            <?php }
+                        else{ ?>
+                            <label class="notification message">좋아요를 누른 영화입니다.</label>
+                            <form action="likeaction.php" method="POST">
+                            <thead>
+                                <tr>
+                                    <th>번호</th><th>제목</th><th>장르</th><th>평점</th><th>재고</th><th>선택</th>
+                                </tr>
+                            </thead>
+                            <?php
                         while($row2 = $result3->fetch_assoc()){ ?>
                         <tbody>
-                        <tr>
-                            <td><?php echo $row2['movid']; ?></td>
-                            <td><?php echo $row2['title']; ?></td>
-                            <td><?php echo $row2['genre']; ?></td>
-                            <td><?php echo $row2['rating']; ?></td>
-                            <td><?php echo $row2['copies']; ?></td>
-                            <td>
-                                <input type="hidden" name="movid" value="<?php echo $row2['movid']; ?>">
-                                <div class="minibtnbox">
-                                    <input name= "likeaction" type="submit" value="주문">
-                                    <input name= "likeaction" type="submit" value="삭제">
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
+                            <tr>
+                                <td><?php echo $row2['movid']; ?></td>
+                                <td><?php echo $row2['title']; ?></td>
+                                <td><?php echo $row2['genre']; ?></td>
+                                <td><?php echo $row2['rating']; ?></td>
+                                <td><?php echo $row2['copies']; ?></td>
+                                <td>
+                                    <input type="hidden" name="movid" value="<?php echo $row2['movid']; ?>">
+                                    <div class="minibtnbox">
+                                        <input name= "likeaction" type="submit" value="주문">
+                                        <input name= "likeaction" type="submit" value="삭제">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
                     <?php  } ?> 
                         </form>
                     <?php } ?>

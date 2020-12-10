@@ -21,7 +21,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/searchaction.css">
-        <title>css test</title>
+        <title>Donmov</title>
     </head>
     <body>
     <div class="container">
@@ -29,6 +29,7 @@
         <nav class="topmenu-nav">
             <div class="topmenu-nav-links">
                 <a href="../index.html" class="topmenu-nav-links-name">Donmov</a>
+                <a href="./bestseller.php" class="topmenu-nav-links-bestseller">베스트셀러</a>
                 <a href="./logout_action.php" class="topmenu-nav-links-logout">로그아웃</a>
             </div>
         </nav>

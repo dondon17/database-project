@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/setting.css">
 
-    <title>Document</title>
+    <title>Donmov</title>
 </head>
 <body>
     <div class="container">

@@ -71,8 +71,8 @@ p{
     margin-right: auto;
 }
 
-.topmenu-nav-links-setting{
-    margin-right: 1rem;
+.topmenu-nav-links-logout{
+    margin-left: 1rem;
 }
 #ajou-univ-btn{
     color: white;
@@ -99,7 +99,7 @@ table thead tr th{
 	border-top: 2px solid rgb(12,65,99);
 	border-bottom: 1px solid #CCC;
 	font-weight: bold;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 }
 
 table tbody tr td{
