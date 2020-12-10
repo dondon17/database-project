@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../css/main.css"> -->
+    <link rel="stylesheet" href="../css/signup.css">
+    <title>css test</title>
+</head>
+<body>
+    <div class="container">
+        <section class="content-section">
+            <form class="signupform" method="POST" action="signup_action.php">
+                <label for="fname"><strong>First Name</strong></label>
+                <input type="text" placeholder="이름" name="fname" required>
+
+                <label for="lname"><strong>Last Name</strong></label>
+                <input type="text" placeholder="성" name="lname" required>
+                
+                <label for="id"><strong>User ID</strong></label>
+                <input type="text" placeholder="아이디" name="id" required>
+
+                <label for="pw"><strong>Password</strong></label>
+                <input type="password" placeholder="비밀번호" name="pw" required>
+
+                <label for="email"><strong>Email</strong></label>
+                <input type="text" placeholder="이메일(example@example.com)" name="email" required>
+
+                <label for="address"><strong>Address</strong></label>
+                <input type="text" placeholder="도로명" name="address" required>
+
+                <label for="city"><strong>City</strong></label>
+                <input type="text" placeholder="도시명" name="city" required>
+                
+                <label for="zipcode"><strong>Zipcode</strong></label>
+                <input type="text" placeholder="우편번호" name="zipcode" required>
+                
+                <label for="phoneno"><strong>Phoneno</strong></label>
+                <input type="text" placeholder="핸드폰번호(010-xxxx-xxxx)" name="phoneno" required>
+
+                <label for="cardno"><strong>CardNo</strong></label>
+                <input type="text" placeholder="카드번호(xxxx-xxxx-xxxx-xxxx)" name="cardno" required>
+
+                <label for="psw"><strong>Account Type</strong></label>
+                <input type="radio" id="basic" name="acctype" value="basic"><label for="basic">basic</label>
+                <input type="radio" id="premium" name="acctype" value="premium"><label for="premium">premium</label>
+
+                <div class="clearfix">
+                    <button type="submit" class="signupbtn" value="signup">Sign Up</button>
+                    <button type="button" class="cancelbtn" value="cancel" onclick="location.href='./login.html'">Cancel</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

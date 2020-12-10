@@ -1,0 +1,120 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+    letter-spacing: -0.05em;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background: none;
+}
+button:hover {
+    border: none;
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+a:link, a:visited, a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+p{
+    line-height: 1.2em;
+}
+
+
+.topmenu-nav{
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+.content-section{
+    position: relative;
+    height: 90vh;
+}
+
+.footer-section{
+    position: relative;
+}
+
+.topmenu-nav, .footer-section{
+    width: 100%;
+    background-color: rgb(12,65,99);
+    height: 5vh;
+    line-height: 5vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.topmenu-nav-links{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.topmenu-nav-links-name{
+    font-size: 1.1rem;
+    margin-right: auto;
+}
+
+#ajou-univ-btn{
+    color: white;
+    font-weight: bolder;
+}
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+	padding: 0.8rem 0;
+	margin: 0.5em 0 1rem 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+table thead tr th{
+    height: 2rem;
+	border-top: 2px solid rgb(12,65,99);
+	border-bottom: 1px solid #CCC;
+	font-weight: bold;
+	font-size: 0.9rem;
+}
+
+table tbody tr td{
+	text-align: center;
+	padding: 0.2rem 0;
+	border-bottom: 1px solid #CCC; 
+	height: 1.3rem;
+	font-size: 0.8rem;
+}
+::-webkit-scrollbar { 
+    width: 1rem; 
+    z-index: -1;
+} /* 스크롤 바 */
+::-webkit-scrollbar { 
+    width: 3px;
+    z-index: 1;
+}
+::-webkit-scrollbar-track { background-color:white; }
+::-webkit-scrollbar-thumb { background: #404040;} 
+::-webkit-scrollbar-thumb:hover { background: #808080; }
+::-webkit-scrollbar-thumb:active { background: rgb(12,65,99); } 

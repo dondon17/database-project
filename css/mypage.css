@@ -1,45 +1,54 @@
-
 .content-section{
-	padding: 25vh 0.5rem;
-	max-width: 100%;
-}
-
-.content-section strong{
-	font-size: 1.2rem;
-}
-.list-table {
+    height: auto;
+    height:100%; /* IE6: treaded as min-height*/
+    min-height:90vh; 
+    display: flex;
     position: relative;
-	width: 100%;
-	padding: 0;
-	/* margin: 1rem auto; */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;    
+    flex-direction: column;
 }
 
-.list-table thead tr th{
-	height:40px;
-	border-top:2px solid #09C;
-	border-bottom:1px solid #CCC;
-	font-weight: bold;
-	font-size: 1rem;
+table label{
+    margin: 0 auto;
+}
+.content-section-accountinfo{
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+} 
+
+.order-list-table, .like-list-table{
+    width: 100%;
+    margin: 0 0 1.5rem 0;
 }
 
-.list-table tbody tr td{
-	text-align: center;
-	padding: 10px 0;
-	border-bottom: 1px solid #CCC; 
-	height:20px;
-	font-size: 1rem;
+.message{
+    text-align: center;
 }
 
 form{
 	margin-top: 3rem;
 }
+.playvideobtn{
+    width: auto;
+    border-radius: 10%;
+    color: white;
+    background-color: #cccccc;
+}
+.minibtnbox{
+    display: flex;
+    justify-content: center;
+}
 .searchbtn {
-	background-color: #4CAF50;
+	padding: 0.8rem;
+    color: white;
+    font-weight: bold;
+    background-color: #ccc;
+    transition-duration: 0.4s;
 }
 
-
-@media(max-width: 500px) {
-	.content-section{
-	  max-width: 95%; 
-	}
-  }
+.searchbtn:hover{
+    background-color: #4CAF50; /* Green */
+    color: white;
+}

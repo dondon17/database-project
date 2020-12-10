@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/default.css">
-    <link rel="stylesheet" href="./css/common.css">
-    <title>Donmov</title>
+    <title>css test</title>
 </head>
 <body>
     <div class="container">
-        <!-- -------------------------- top menu bar --------------------------- -->
-        <nav class="topmenu">
-            <div class="topmenu-links">
-                <a class="topmenu-links-name" href="index.html">DonmoV</a>
-                <a class="topmenu-links-login" href="login.php">로그인</a>
+        <!-- ------- 공통 top menu(index 페이지를 제외하고 로그아웃으로 변경) ------- -->
+        <nav class="topmenu-nav">
+            <div class="topmenu-nav-links">
+                <a href="#" class="topmenu-nav-links-name">Donmov</a>
+                <a href="./pages/login.html" class="topmenu-nav-links-login">로그인</a>
             </div>
         </nav>
-        <!-- -------------------------- content -------------------------------- -->
+        <!-- ------- 가운데 content 영역 (각종 form, db 데이터 호출 결과 등) ------- -->
         <section class="content-section">
-            <div class="sticky-elem main-message a">
+            <div class="content-section main-message">
                 <p>
-                    <strong>영화, TV 프로그램을<br>무제한으로</strong><br> 
+                    <strong>
+                        영화, TV 프로그램을<br>
+                        무제한으로<br>
+                    </strong>
                     다양한 디바이스에서 즐겨보세요<br>
                 </p>
             </div>
         </section>
-            
-        <!-- ----------------------------- footer ----------------------------- -->
-        <footer class="js-footer">
-            <div class="sns_btn">
-                <button id="ajou_btn" onclick="">Ajou</button>
+        <!-- ------------------------- footer 영역 고정 -------------------------- -->
+        <footer class="footer-section">
+            <div class="footer-section-btn">
+                <button id="ajou-univ-btn">AJOU</button>
             </div>
         </footer>
     </div>

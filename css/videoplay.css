@@ -1,0 +1,23 @@
+.content-section{
+    width: 100%;
+    height: auto;
+    height:100%; /* IE6: treaded as min-height*/
+    min-height:90vh; 
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;    
+    flex-direction: column;
+}
+.title-area, .rebtn{
+    margin: 2rem auto;
+}
+.rebtn{
+    border: 1px #ddd solid;
+    padding: 0.8rem;
+    color: white;
+    font-weight: bold;
+    background-color: #ccc;
+    transition-duration: 0.4s;
+}
