@@ -29,6 +29,7 @@
         <nav class="topmenu-nav">
             <div class="topmenu-nav-links">
                 <a href="../index.html" class="topmenu-nav-links-name">Donmov</a>
+                <a href="./setting.php" class="topmenu-nav-links-setting">계정 설정</a>
                 <a href="./logout_action.php" class="topmenu-nav-links-logout">로그아웃</a>
             </div>
         </nav>

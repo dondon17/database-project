@@ -1,0 +1,40 @@
+.content-section{
+    height: auto;
+    height:100%; /* IE6: treaded as min-height*/
+    min-height:90vh; 
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;    
+    flex-direction: column;
+}
+
+h2{
+    margin-top: 1.5rem;
+}
+input.fixed-text{
+    pointer-events: none;
+}
+.account-setting{
+    width: 95%;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+
+button{
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background: none;
+}
+
+.cancelbtn, .signupbtn {
+    color: white;
+    background-color: #cccccc;
+    float: left;
+    width: 50%;
+    padding: 0.8rem 0;
+    margin: 0.8rem 0;
+}    
