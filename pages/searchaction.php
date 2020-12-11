@@ -29,7 +29,6 @@
         <nav class="topmenu-nav">
             <div class="topmenu-nav-links">
                 <a href="../index.html" class="topmenu-nav-links-name">Donmov</a>
-                <a href="./bestseller.php" class="topmenu-nav-links-bestseller">베스트셀러</a>
                 <a href="./logout_action.php" class="topmenu-nav-links-logout">로그아웃</a>
             </div>
         </nav>

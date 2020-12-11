@@ -60,3 +60,9 @@ form{
     background-color: #4CAF50; /* Green */
     color: white;
 }
+
+#playbtn{
+    float: right;
+    margin-top: -1.5rem;
+    margin-left: auto;
+}

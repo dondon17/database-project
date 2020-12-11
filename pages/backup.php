@@ -1,5 +1,4 @@
 <?php
-
     include '../db.php';
     session_start();
     $connect = OpenCon();
@@ -22,7 +21,6 @@
     <title>video play</title>
 </head>
 <body>
-
 <div class="container">
         <!-- ------- 공통 top menu(index 페이지를 제외하고 로그아웃으로 변경) ------- -->
         <nav class="topmenu-nav">
@@ -80,7 +78,7 @@
                     <div class="clearfix">
                         <input type="hidden" name="movid" value="<?php echo $movid; ?>">
                         <input type="submit" class="addbtn" value="등록">
-                        <button type="button" class="rebtn" onclick="location.href='./mypage.php'">마이페이지로</button>            
+                        <button type="button" class="rebtn" value="research" onclick="location.href='./mypage.php'">마이페이지로</button>            
                     </div>
                 </form>
             </div>

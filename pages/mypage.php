@@ -96,16 +96,15 @@
                                 <td><?php echo $row['genre']; ?></td>
                                 <td><?php echo $row['rating']; ?></td>
                                 <td><?php echo $row['duedate']; ?></td>
-                                <td>
-                                    <input type="hidden" name="movid" value="<?php echo $row['movid']; ?>">
-                                    <input name="videoaction" type="submit" value="▶">
-                                </td>
+                                <td><input type="radio" name="movid" value="<?php echo $row['movid']; ?>"></td>
                             </tr>
                             </tbody>
                             <?php } ?>
-                            </form>
-                            <?php } ?>
-                    </table>
+                        </table>
+                        <input id="playbtn" type="submit" value="▶재생">
+                    </form>
+                    <?php } ?>
+
                     <!-- 좋아요 누른 영화목록; 계정에 관계없이 좋아요는 무제한으로 추가 가능 -->
                     <div class="videoplace"> </div>
                     <table class="like-list-table">

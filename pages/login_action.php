@@ -21,14 +21,11 @@
         if($row['cuspw'] == $userpw){
             $_SESSION['cusid'] = $userid;
             $_SESSION['acctype'] = $row['acctype'];
+
+
             if(isset($_SESSION['cusid'])){
                 echo "<script>alert(\"로그인 되었습니다.\"); </script>";
-                if($_SESSION['cusid'] == 'admin') {
-                    echo "<script>location.replace(\"adminpage.php\"); </script>";
-                }
-                else {
-                    echo "<script>location.replace(\"mypage.php\"); </script>";
-                }
+                echo "<script>location.replace(\"mypage.php\"); </script>";
             }else{
                 echo "session fail";
             }
