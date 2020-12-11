@@ -26,7 +26,7 @@
         } else{
         ?>
             <script>
-                alert('영화의 잔여 수가 없거나 사용자 계정이 basic 타입입니다.');
+                alert('이미 주문한 영화거나 영화의 잔여 수가 없거나 사용자 계정이 basic 타입입니다.');
                 location.replace("./mypage.php");
             </script>
         <?php

@@ -10,14 +10,56 @@
     margin: 0 auto;    
     flex-direction: column;
 }
-.title-area, .rebtn{
+#reviewform{
+    margin: 0 auto;
+    width: 95%;
+    max-width: 600px;
+}
+.message{
+    margin-top: 2rem;
+}
+.title-area{
     margin: 2rem auto;
 }
-.rebtn{
+
+input[type=submit]{
+    cursor: pointer;
+}
+.videoarea{
+    margin-bottom: 2rem;
+}
+
+.rebtn, input[type=submit]{
     border: 1px #ddd solid;
     padding: 0.8rem;
     color: white;
     font-weight: bold;
     background-color: #ccc;
     transition-duration: 0.4s;
+    width: 50%;
+}
+input[type=submit]{
+    float: left;
+}
+
+input[type=submit]:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.content-section-review{
+    width: 95%;
+    max-width: 500px;
+    margin: 0 0 1.5rem 0;
+}
+
+.review-table{
+    width: 100%;
+    margin: 0 0 1.5rem 0;
 }

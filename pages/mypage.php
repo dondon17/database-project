@@ -42,9 +42,9 @@
             <div class="content-section-movieinfo">
                 <table class="bestseller-table">
                 <?php 
-                $query0 = "select movid, title, genre, rating, copies, count(*) 주문수 from movie where movid in (select ordmovid from orders) group by movid, title order by 주문수 desc limit 5";
+                $query0 = "select movid, title, genre, rating, copies, count(*) 주문수 from orders, movie where orders.ordmovid=movie.movid group by movid, title order by 주문수 desc limit 5;";
                 $result0 = $connect->query($query0);                
-                if(mysqli_num_rows($result0) == 0){ ?>
+                if(!mysqli_num_rows($result0)){ ?>
                     <label class="notification message">아직 베스트 셀러가 없습니다.</label>
                 <?php }
                 else{ ?>                 
@@ -81,7 +81,7 @@
                     }
                     else{ ?>
                         <label class="notification message">보유 중인 영화입니다.</label>
-                        <form action="videoplay.php" method="POST">
+                        <form action="playvideo.php" method="POST">
                         <thead>
                             <tr>
                                 <th>번호</th><th>제목</th><th>장르</th><th>평점</th><th>만료일</th><th>선택</th>
